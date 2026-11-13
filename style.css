@@ -1,0 +1,56 @@
+*{box-sizing:border-box}
+:root{--ink:#25223d;--muted:#77758c;--purple:#7657e8;--pink:#ff6f91;--yellow:#ffd166;--mint:#79d9c4;--paper:#fff;--line:#ece9f5}
+body{margin:0;min-height:100vh;padding:24px 18px 34px;background:#f6f3ff;color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif}
+.shell{width:min(940px,100%);margin:auto}
+.topbar,footer{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-weight:900;font-size:1.2rem;letter-spacing:-.05em}
+.brand-mark{display:grid;place-items:center;width:30px;height:30px;border-radius:10px;background:var(--purple);color:#fff;font-size:1rem;transform:rotate(-7deg)}
+.brand-dot{color:var(--pink)}
+.top-tag,footer{font-size:.66rem;letter-spacing:.12em;font-weight:800;color:var(--muted)}
+.intro{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:43px 0 28px}
+.eyebrow{font-size:.68rem;letter-spacing:.15em;font-weight:900;color:var(--purple);margin:0 0 9px}
+h1,h2,p{margin-top:0}
+h1{font-size:clamp(2.5rem,7vw,4.6rem);line-height:.99;letter-spacing:-.075em;margin-bottom:14px}
+h1 span{color:var(--purple);text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:7px;text-underline-offset:5px}
+.intro-copy{max-width:490px;color:var(--muted);line-height:1.65;margin:0}
+.doodle{position:relative;display:grid;place-items:center;width:150px;height:130px;border-radius:34px;background:var(--yellow);transform:rotate(5deg);box-shadow:9px 9px 0 #e9d6ff;flex-shrink:0}
+.doodle span{font-size:4.2rem}.doodle b{position:absolute;right:-10px;top:-12px;background:var(--pink);color:#fff;border-radius:20px;padding:8px 13px;transform:rotate(-9deg)}.doodle i{position:absolute;left:-13px;bottom:-10px;color:var(--purple);font-size:2rem;font-style:normal}
+.score-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:16px}
+.score-card,.challenge-card,.result-card{background:var(--paper);border:1px solid var(--line);border-radius:19px;box-shadow:0 9px 28px #473b7410}
+.score-card{padding:15px 17px;position:relative;overflow:hidden}
+.score-card:after{content:"";position:absolute;width:45px;height:45px;border-radius:50%;right:-15px;top:-15px;background:#f0eaff}
+.time-card{background:var(--purple);color:#fff;border-color:var(--purple)}
+.time-card:after{background:#ffffff20}
+.stat-label{display:block;font-size:.62rem;font-weight:900;letter-spacing:.12em;color:var(--muted)}
+.time-card .stat-label,.time-card small{color:#e7dfff}
+.score-card strong{display:block;font-size:2rem;letter-spacing:-.06em;margin:5px 0 0}
+.score-card small{font-size:.7rem;color:var(--muted)}
+.challenge-card{padding:clamp(18px,4vw,30px)}
+.challenge-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.challenge-head h2,.result-card h2{font-size:1.45rem;letter-spacing:-.04em;margin:0}
+.pill{font-size:.65rem;font-weight:900;letter-spacing:.08em;background:#fff4d6;color:#8a6411;border-radius:30px;padding:9px 12px;white-space:nowrap}
+.live-dot{display:inline-block;width:7px;height:7px;background:#32b887;border-radius:50%;margin-right:5px}
+.quote-display{min-height:140px;padding:18px 20px;background:#f8f6ff;border:1px dashed #d8cff7;border-radius:14px;font-size:1.13rem;line-height:2;letter-spacing:.01em;margin-bottom:19px}
+.quote-display span.correct{color:#16845f;background:#dcf8ec;border-radius:4px}
+.quote-display span.incorrect{color:#c52e5b;background:#ffe0e9;border-radius:4px;text-decoration:underline}
+.quote-display span.active{border-left:2px solid var(--purple);animation:cursor .8s steps(2,start) infinite}
+@keyframes cursor{to{border-color:transparent}}
+label{display:block;font-size:.67rem;font-weight:900;letter-spacing:.12em;color:var(--muted);margin-bottom:8px}
+textarea{width:100%;min-height:85px;resize:vertical;padding:14px;border:1.5px solid #e5e0f2;border-radius:12px;font:1rem/1.5 "Trebuchet MS",Arial,sans-serif;color:var(--ink);outline:none}
+textarea:focus{border-color:var(--purple);box-shadow:0 0 0 4px #7657e81b}
+textarea:disabled{background:#f4f2f8}
+.challenge-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
+.challenge-bottom p{font-size:.8rem;color:var(--muted);margin:0}
+.button{border:0;border-radius:11px;padding:12px 17px;font-weight:900;cursor:pointer;transition:transform .15s,filter .15s}
+.button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.button:focus-visible{outline:3px solid #b7a8fa;outline-offset:3px}
+.button-dark{background:var(--ink);color:#fff}.button-dark span{color:var(--yellow);font-size:1.1rem;margin-right:4px}
+.button-pop{background:var(--pink);color:#fff}
+.result-card{position:relative;text-align:center;padding:27px;margin-top:16px;overflow:hidden}
+.result-spark{font-size:2rem;color:var(--yellow)}
+.result-card>p:not(.eyebrow){color:var(--muted)}
+footer{padding:22px 2px 0}
+footer span:first-child{color:var(--purple)}
+[hidden]{display:none!important}
+@media(max-width:650px){body{padding:18px 12px}.top-tag{font-size:.55rem;text-align:right}.intro{padding:32px 0 22px}.doodle{width:95px;height:90px;border-radius:23px}.doodle span{font-size:2.8rem}.score-strip{grid-template-columns:repeat(2,1fr)}.challenge-head{align-items:flex-start;flex-direction:column}.challenge-bottom{align-items:flex-start;flex-direction:column}}
+@media print{body{background:#fff}.topbar,.challenge-bottom,textarea,footer{display:none}.shell{width:100%}.challenge-card,.score-card{box-shadow:none}}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A colourful 60-second typing speed challenge.">
+  <title>KeyPop — Typing Challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="KeyPop home"><span class="brand-mark">K</span> keypop<span class="brand-dot">.</span></a>
+      <span class="top-tag">A LITTLE PRACTICE. A LOT OF PROGRESS.</span>
+    </header>
+
+    <section class="intro">
+      <div>
+        <p class="eyebrow">THE DAILY KEYBOARD CLUB</p>
+        <h1>Make every<br><span>keystroke</span> count.</h1>
+        <p class="intro-copy">A one-minute challenge to find your flow, build accuracy and beat your personal best.</p>
+      </div>
+      <div class="doodle" aria-hidden="true"><span>⌨️</span><b>60s</b><i>✦</i></div>
+    </section>
+
+    <section class="score-strip" aria-label="Live statistics">
+      <article class="score-card time-card"><span class="stat-label">TIME LEFT</span><strong id="time">60</strong><small>seconds</small></article>
+      <article class="score-card"><span class="stat-label">YOUR WPM</span><strong id="wpm">0</strong><small>words / minute</small></article>
+      <article class="score-card"><span class="stat-label">ACCURACY</span><strong id="accuracy">100%</strong><small>correct characters</small></article>
+      <article class="score-card"><span class="stat-label">MISTAKES</span><strong id="mistakes">0</strong><small>letters to learn from</small></article>
+    </section>
+
+    <section class="challenge-card">
+      <div class="challenge-head">
+        <div><p class="eyebrow">ROUND 01 · THE WARM-UP</p><h2>Ready, set, type!</h2></div>
+        <span class="pill"><span class="live-dot"></span> 60 SECOND TEST</span>
+      </div>
+      <div id="quoteDisplay" class="quote-display" aria-label="Passage to type"></div>
+      <label for="quoteInput">YOUR TYPING SPACE</label>
+      <textarea id="quoteInput" rows="3" spellcheck="false" autocomplete="off" autocorrect="off" placeholder="Tap here and type the passage above..."></textarea>
+      <div class="challenge-bottom">
+        <p id="status" role="status">The clock begins with your first keystroke.</p>
+        <button id="restartBtn" class="button button-dark" type="button"><span>↻</span> New round</button>
+      </div>
+    </section>
+
+    <section id="result" class="result-card" hidden aria-live="polite">
+      <div class="result-spark">✦</div><p class="eyebrow">ROUND COMPLETE</p>
+      <h2>Look at you go!</h2>
+      <p id="resultText"></p>
+      <button id="tryAgainBtn" class="button button-pop" type="button">Play another round ↗</button>
+    </section>
+    <footer><span>KEYPOP CLUB</span><span>Practice makes progress ✦</span></footer>
+  </main>
+</body>
+</html>
